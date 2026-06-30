@@ -9,10 +9,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-.product-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin: 50px 0; }
 .product-gallery-main { border: 1px solid var(--gray-200); overflow: hidden; }
 .product-gallery-main img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
-.product-gallery-thumbs { display: flex; gap: 10px; margin-top: 15px; }
+.product-gallery-thumbs { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
 .product-gallery-thumbs img { width: 80px; height: 100px; object-fit: cover; border: 1px solid var(--gray-200); cursor: pointer; transition: var(--transition); }
 .product-gallery-thumbs img:hover, .product-gallery-thumbs img.active { border-color: var(--black); }
 .product-details h1 { font-family: var(--font-secondary); font-size: 32px; margin-bottom: 15px; }
@@ -28,7 +27,10 @@
 .product-meta { margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--gray-200); }
 .product-meta p { font-size: 14px; color: var(--gray-500); margin-bottom: 5px; }
 .product-meta span { color: var(--black); font-weight: 500; }
-@media (max-width: 768px) { .product-wrapper { grid-template-columns: 1fr; gap: 30px; } }
+@media (max-width: 576px) {
+  .product-details h1 { font-size: 24px; }
+  .product-gallery-thumbs img { width: 60px; height: 80px; }
+}
 </style>
 </head>
 <body>
@@ -111,10 +113,10 @@
   </div>
 </header>
 
-<section class="page-banner" style="background: #1a1a1a; padding: 60px 0; text-align: center;">
+<section class="page-banner" style="background: #1a1a1a;">
   <div class="container">
-    <h1 style="font-family: var(--font-secondary); font-size: 36px; color: #fff; margin-bottom: 10px;">Product Details</h1>
-    <p style="color: #909090; font-size: 14px;"><a href="index.html" style="color: #909090;">Home</a> / <a href="shop.html" style="color: #909090;">Shop</a> / Indian Cherry Panjabi IC Silver</p>
+    <h1>Product Details</h1>
+    <p><a href="index.html">Home</a> / <a href="shop.html">Shop</a> / Indian Cherry Panjabi IC Silver</p>
   </div>
 </section>
 
